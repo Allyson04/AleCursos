@@ -1,0 +1,19 @@
+/* common styles */
+
+.backgroundFull {
+    width: 100vw;
+    height: 50vh;
+    border: 1px solid red;
+}
+
+/* Header */
+
+header {
+    background: #E5E5E5; 
+}
+
+header h1 {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+}
