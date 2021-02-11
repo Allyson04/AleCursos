@@ -205,6 +205,51 @@ footer#contact .contacts a {
     width: 4.5rem;
 }
 
+footer#contact .contacts img {
+    transform: rotateX(45deg)rotateZ(-45deg);
+    -webkit-transform: rotateX(45deg)rotateZ(-45deg);
+    -moz-transform: rotateX(45deg)rotateZ(-45deg);
+    -ms-transform: rotateX(45deg)rotateZ(-45deg);
+    -o-transform: rotateX(45deg)rotateZ(-45deg);
+    transition: transform 0.4s;
+    -webkit-transition: transform 0.4s;
+    -moz-transition: transform 0.4s;
+    -ms-transition: transform 0.4s;
+    -o-transition: transform 0.4s;
+}
+
+footer#contact .contacts img:hover {
+    /* box-shadow: -10px 10px 10px 5px white, -15px 15px black; */
+
+    transform: rotateX(45deg) rotateZ(-45deg) translate(15px, -15px);
+    -webkit-transform: rotateX(45deg) rotateZ(-45deg) translate(15px, -15px);
+    -moz-transform: rotateX(45deg) rotateZ(-45deg) translate(15px, -15px);
+    -ms-transform: rotateX(45deg) rotateZ(-45deg) translate(15px, -15px);
+    -o-transform: rotateX(45deg) rotateZ(-45deg) translate(15px, -15px);
+}
+
+footer#contact .contacts a:nth-child(1) img:hover {
+    box-shadow: -10px 10px 5px 5px white, -15px 15px 5px 5px rgb(34, 152, 213);
+}
+
+footer#contact .contacts a:nth-child(2) img:hover {
+    box-shadow: -10px 10px 5px 5px white, -15px 15px 5px 5px rgb(70, 199, 86);
+}
+
+footer#contact .contacts a:nth-child(3) img:hover {
+    box-shadow: -10px 10px 5px 5px white, -15px 15px 5px 5px rgb(226, 227, 21);
+}
+
+footer#contact .contacts a:nth-child(4) img:hover {
+    box-shadow: -10px 10px 5px 5px white, -15px 15px 5px 5px rgb(0, 132, 177);
+}
+
+footer#contact .contacts a:nth-child(5) img:hover {
+    box-shadow: -10px 10px 5px 5px white, -15px 15px 5px 5px rgb(254, 216, 117);
+
+}
+
+
 footer#contact .contacts a {
     margin: 1rem;
 }
