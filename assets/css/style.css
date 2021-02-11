@@ -20,8 +20,13 @@ h2 {
 /* Header */
 
 body>header.backgroundFull {
-    background: #E5E5E5; 
-    height: 50vh;
+    background: /* linear-gradient(#e5e5e57e, #e5e5e57e),*/ url(../background/background-banner.jpeg) no-repeat,  black ;
+    background-size: contain;
+    background-attachment: scroll;
+    background-position: center;
+    /* background */
+    height: auto;
+    background-clip: content-box;
 }
 
 header h1 {
@@ -31,10 +36,10 @@ header h1 {
 }
 
 header #menuButton {
-    background: rgba(255,255,255,0.1);
+    background: rgba(163, 160, 160, 0.425);
     border: 4px outset rgba(66, 179, 231, 0.801);
     position: relative;
-    top: -20px;
+    top: 100px;
     left: 2rem;
     width: 7rem;
     height: 4rem;
@@ -87,7 +92,7 @@ header nav#menuList {
     -ms-border-radius: 10px 0 10px 0;
     -o-border-radius: 10px 0 10px 0;
     position: relative;
-    top: -10px;
+    top: 110px;
     left: -10rem; /*otherwise left: 2rem*/
     display: flex;
     flex-direction: column;
