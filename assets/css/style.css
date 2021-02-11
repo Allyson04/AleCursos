@@ -17,11 +17,6 @@ h2 {
     font-size: 2rem;
 }
 
-#projects img{
-    height: 500px;
-    width: 500px;
-}
-
 /* Header */
 
 header {
@@ -76,4 +71,36 @@ article#faq .faq-question p {
     font-size: 1rem;
     font-weight: 500;
     text-decoration: none;
+}
+
+/* projects */
+
+article#projects {
+    text-align: center;
+    height: auto;
+    padding: 2rem;
+}
+
+article#projects h2 {
+    font-size: 2.5rem;
+}
+
+article#projects .projects {
+    margin: 1rem;
+}
+
+article#projects .projects h3 {
+    font-size: 1.7rem;
+    margin: 0.5rem 0;
+}
+
+article#projects .projects img {
+    height: 500px;
+    width: 500px;
+    border-radius: 0.8rem;
+    -webkit-border-radius: 0.8rem;
+    -moz-border-radius: 0.8rem;
+    -ms-border-radius: 0.8rem;
+    -o-border-radius: 0.8rem;
+    border: 5px inset #5746f1af;
 }
