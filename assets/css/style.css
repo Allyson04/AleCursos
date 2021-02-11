@@ -202,3 +202,9 @@ footer#contact span {
     display: inline-block;
     margin-bottom: 1rem;
 }
+
+footer#contact span a {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
