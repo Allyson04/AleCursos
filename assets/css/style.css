@@ -37,7 +37,6 @@ main#about {
 }
 
 main#about p {
-    border: 1px solid red;
     padding: 1rem;
     margin: 1rem 0;
     font-size: 1.1rem;
@@ -52,7 +51,6 @@ article#faq {
 }
 
 article#faq .faq-question {
-    /* padding: .75rem; */
     margin: 1.5rem 2rem;
 }
 
@@ -65,7 +63,6 @@ article#faq .faq-question h4 {
 article#faq .faq-question p {
     font-size: 1rem;
     font-weight: 500;
-    text-decoration: none;
 }
 
 /* projects */
