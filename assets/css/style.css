@@ -1,7 +1,7 @@
 /* common styles */
 
 .backgroundFull {
-    width: 100vw;
+    width: 100vh;
     height: 50vh;
 }
 
@@ -47,4 +47,33 @@ main#about p {
     margin: 1rem 0;
     font-size: 1.1rem;
     text-align: center;
+}
+
+/* faq */
+
+article#faq {
+    background: #E5E5E5; 
+    padding: 2.5rem;
+    height: auto;
+}
+
+article#faq h2 {
+    font-size: 2.5rem;
+}
+
+article#faq .faq-question {
+    /* padding: .75rem; */
+    margin: 1.5rem 2rem;
+}
+
+article#faq .faq-question h4 {
+    text-align: left;
+    font-size: 1.27rem;
+    font-weight: 600;
+}
+
+article#faq .faq-question p {
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
 }
