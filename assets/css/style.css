@@ -173,8 +173,8 @@ article#projects .projects h3 {
 }
 
 article#projects .projects img {
-    height: 500px;
-    width: 500px;
+    height: min(20rem, 400px);
+    width: min(20rem, 400px);
     border-radius: 0.8rem;
     -webkit-border-radius: 0.8rem;
     -moz-border-radius: 0.8rem;
