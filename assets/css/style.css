@@ -34,7 +34,8 @@ header #menuButton {
     background: rgba(255,255,255,0.1);
     border: 4px outset rgba(66, 179, 231, 0.801);
     position: relative;
-    left: 30px;
+    top: -20px;
+    left: 2rem;
     width: 7rem;
     height: 4rem;
     display: flex;
@@ -73,21 +74,38 @@ header #menuButton svg {
     height: 1.8rem;
 }
 
-header #menuButton ul {
-    list-style: none;
-    border: 1px solid black;
-    border-radius: 0 4px 4px 4px;
-    padding: 10px;
-    display: none;
+header nav#menuList {
+    background: rgba(255, 255, 255, 0.418);
+
+    width: 9.5rem;
+    font-size: 1.6rem;
+    padding-left: 0.5rem;
+    border: 5px outset rgba(66, 179, 231, 0.801);
+    border-radius: 10px 0 10px 0;
+    -webkit-border-radius: 10px 0 10px 0;
+    -moz-border-radius: 10px 0 10px 0;
+    -ms-border-radius: 10px 0 10px 0;
+    -o-border-radius: 10px 0 10px 0;
     position: relative;
-    top: 73px;
-    left: 13px;
-    background: rgba(189, 64, 64, 0.6);
-    text-decoration: none;
-    -webkit-border-radius: 0 4px 4px 4px;
-    -moz-border-radius: 0 4px 4px 4px;
-    -ms-border-radius: 0 4px 4px 4px;
-    -o-border-radius: 0 4px 4px 4px;
+    top: -10px;
+    left: -10rem; /*otherwise left: 2rem*/
+    display: flex;
+    flex-direction: column;
+    transition: left 0.3s ease-in-out;
+    -webkit-transition: left 0.3s ease-in-out;
+    -moz-transition: left 0.3s ease-in-out;
+    -ms-transition: left 0.3s ease-in-out;
+    -o-transition: left 0.3s ease-in-out;
+}
+
+header nav#menuList a {
+    margin: 0.5rem 1rem;
+}
+
+header nav#menuList a:hover {
+    color: rgb(54, 56, 56);
+    font-size: 1.7rem;
+    text-decoration: underline solid #797bf8 5px;
 }
 
 /* about */

@@ -3,9 +3,9 @@ let mode = true
 
 function toggleMenu() {
     if (mode) {
-        catchMenuStyle.display = "block"
+        catchMenuStyle.left = "2rem"
     } else {
-        catchMenuStyle.display = "none"
+        catchMenuStyle.left = "-10rem"
     }
 
     mode = !mode
