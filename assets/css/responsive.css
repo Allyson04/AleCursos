@@ -22,7 +22,7 @@
         -moz-transform: scale(1.2);
         -ms-transform: scale(1.2);
         -o-transform: scale(1.2);
-}
+    }
 
     article #projects figure.projects h3~img {
         width: 100%;
