@@ -104,3 +104,38 @@ article#projects .projects img {
     -o-border-radius: 0.8rem;
     border: 5px inset #5746f1af;
 }
+
+/* contacts */
+
+footer#contact {
+    background: #E5E5E5;
+    height: auto;
+    text-align: center;
+}
+
+footer#contact h2 {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+footer#contact .contacts {
+    margin: 2.5rem 0;
+}
+
+footer#contact .contacts img ,
+footer#contact .contacts a {
+    width: 4.5rem;
+}
+
+footer#contact .contacts a {
+    margin: 1rem;
+}
+
+footer#contact span {
+    font-size: 1.5rem;
+    font-weight: 400;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
