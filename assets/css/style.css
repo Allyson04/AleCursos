@@ -30,6 +30,66 @@ header h1 {
     font-size: 3rem;
 }
 
+header #menuButton {
+    background: rgba(255,255,255,0.1);
+    border: 4px outset rgba(66, 179, 231, 0.801);
+    position: relative;
+    left: 30px;
+    width: 7rem;
+    height: 4rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+    transition: background 0.5s;
+    -webkit-transition: background 0.5s;
+    -moz-transition: background 0.5s;
+    -ms-transition: background 0.5s;
+    -o-transition: background 0.5s;
+}
+
+header #menuButton:hover {
+    background: rgba(255, 255, 255, 0.582);
+}
+
+header #menuButton:active {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+
+header #menuButton span {
+    font-size: 1.5rem;
+}
+
+header #menuButton svg {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+header #menuButton ul {
+    list-style: none;
+    border: 1px solid black;
+    border-radius: 0 4px 4px 4px;
+    padding: 10px;
+    display: none;
+    position: relative;
+    top: 73px;
+    left: 13px;
+    background: rgba(189, 64, 64, 0.6);
+    text-decoration: none;
+    -webkit-border-radius: 0 4px 4px 4px;
+    -moz-border-radius: 0 4px 4px 4px;
+    -ms-border-radius: 0 4px 4px 4px;
+    -o-border-radius: 0 4px 4px 4px;
+}
+
 /* about */
 
 main#about {
