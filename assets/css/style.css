@@ -19,7 +19,7 @@ h2 {
 
 /* Header */
 
-header {
+body>header.backgroundFull {
     background: #E5E5E5; 
     height: 50vh;
 }
