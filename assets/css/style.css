@@ -82,9 +82,7 @@ header #menuButton svg {
 header nav#menuList {
     background: rgba(255, 255, 255, 0.651);
 
-    width: 9.5rem;
     font-size: 1.6rem;
-    padding-left: 0.5rem;
     border: 5px outset rgba(66, 179, 231, 0.801);
     border-radius: 10px 0 10px 0;
     -webkit-border-radius: 10px 0 10px 0;
@@ -93,8 +91,8 @@ header nav#menuList {
     -o-border-radius: 10px 0 10px 0;
     position: relative;
     top: 110px;
-    left: -10rem; /*otherwise left: 2rem*/
-    display: flex;
+    left: -15rem; /*otherwise left: 2rem*/
+    display: inline-flex;
     flex-direction: column;
     transition: left 0.3s ease-in-out;
     -webkit-transition: left 0.3s ease-in-out;
