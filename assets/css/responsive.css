@@ -1,4 +1,39 @@
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
+    header #menuButton {
+        width: 15vw;
+        max-width: 120px;
+        height: 5rem;
+        max-height: 70px;
+
+        top: 4rem;
+        left: 1.5rem;
+
+        /* display: inline-flex; */
+    }
+
+    header span.sr-only {
+        position: relative;
+        /* display: inline; */
+        /* clip-path: auto; */
+        /* padding: 10px; */
+        /* margin: 10px; */
+        overflow:auto;
+
+        margin: 5px;
+        /* background: red; */
+    }
+
+    header #menuButton svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin: 10px 10px 10px 0;
+        /* background: blue; */
+    }
+
+    header nav#menuList {
+        top: 5rem;
+    }
+
     article#projects,
     article#projects div {
         padding: 0;

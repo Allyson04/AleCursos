@@ -17,6 +17,16 @@ h2 {
     font-size: 2.5rem;
 }
 
+.sr-only {
+    position: absolute;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; /* added line */
+    border: 0;
+}
+
 /* Header */
 
 body>header.backgroundFull {
@@ -39,10 +49,14 @@ header #menuButton {
     background: rgba(163, 160, 160, 0.551);
     border: 4px outset rgba(66, 179, 231, 0.801);
     position: relative;
-    top: 100px;
-    left: 2rem;
-    width: 7rem;
+    top: 9rem;
+    left: 1.5rem;
+    width: 4rem;
     height: 4rem;
+    /* min-width: 10vw;
+    min-height: 10vw; */
+    /* max-width: 200px;
+    max-height: 200px; */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -56,6 +70,8 @@ header #menuButton {
     -moz-transition: background 0.5s;
     -ms-transition: background 0.5s;
     -o-transition: background 0.5s;
+
+    cursor: pointer;
 }
 
 header #menuButton:hover {
@@ -75,8 +91,9 @@ header #menuButton span {
 }
 
 header #menuButton svg {
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 2rem;
+    height: 2rem;
+    margin: 10px;
 }
 
 header nav#menuList {
@@ -90,7 +107,7 @@ header nav#menuList {
     -ms-border-radius: 10px 0 10px 0;
     -o-border-radius: 10px 0 10px 0;
     position: relative;
-    top: 110px;
+    top: 10rem;
     left: -15rem; /*otherwise left: 2rem*/
     display: inline-flex;
     flex-direction: column;
