@@ -1,8 +1,40 @@
+/* Root */
+:root {
+    /* header */
+    --cyan-menu: rgba(66, 179, 231, 0.801);
+    --purple-underline: #797bf8;
+    --smoke-lighter-menu: rgba(221, 221, 221, 0.603);
+    --smoke-menu-hover:  rgba(255, 255, 255, 0.685);
+    --smoke-list: rgba(255, 255, 255, 0.801);
+    --light-black:  rgb(54, 56, 56);
+
+
+    /* projects */
+    --purple-border: #5746f1af;
+
+
+    /* contacts */
+    --telegram: rgb(34, 152, 213);
+    --whatsapp: rgb(70, 199, 86);
+    --email: rgb(226, 227, 21);
+    --linkedin: rgb(0, 132, 177);
+    --instagram: rgb(254, 216, 117);
+}
+
+
 /* common styles */
 
 .backgroundFull {
     width: 100%;
     height: auto;
+}
+
+.backgroundFull:nth-child(even) {
+    background: #fff;
+}
+
+.backgroundFull:nth-child(2n+3) {
+    background: #E5E5E5;
 }
 
 h1,
@@ -30,7 +62,7 @@ h2 {
 /* Header */
 
 body>header.backgroundFull {
-    background: /* linear-gradient(#e5e5e57e, #e5e5e57e),*/ url(../background/background-banner.jpeg) no-repeat,  black ;
+    background: /* linear-gradient(#e5e5e57e, #e5e5e57e),*/ url(../background/background-banner.jpeg) no-repeat,  black;
     background-size: contain;
     background-attachment: scroll;
     background-position: center;
@@ -46,8 +78,8 @@ header h1 {
 }
 
 header #menuButton {
-    background: rgba(163, 160, 160, 0.551);
-    border: 4px outset rgba(66, 179, 231, 0.801);
+    background: var(--smoke-lighter-menu);
+    border: 4px outset var(--cyan-menu);
     position: relative;
     top: 9rem;
     left: 1.5rem;
@@ -75,7 +107,7 @@ header #menuButton {
 }
 
 header #menuButton:hover {
-    background: rgba(255, 255, 255, 0.582);
+    background: var(--smoke-menu-hover);
 }
 
 header #menuButton:active {
@@ -97,10 +129,9 @@ header #menuButton svg {
 }
 
 header nav#menuList {
-    background: rgba(255, 255, 255, 0.651);
-
+    background: var(--smoke-list);
     font-size: 1.6rem;
-    border: 5px outset rgba(66, 179, 231, 0.801);
+    border: 5px outset var(--cyan-menu);
     border-radius: 10px 0 10px 0;
     -webkit-border-radius: 10px 0 10px 0;
     -moz-border-radius: 10px 0 10px 0;
@@ -108,7 +139,7 @@ header nav#menuList {
     -o-border-radius: 10px 0 10px 0;
     position: relative;
     top: 10rem;
-    left: -15rem; /*otherwise left: 2rem*/
+    left: -15rem; /*otherwise left:2rem;*/
     display: inline-flex;
     flex-direction: column;
     transition: left 0.3s ease-in-out;
@@ -123,9 +154,9 @@ header nav#menuList a {
 }
 
 header nav#menuList a:hover {
-    color: rgb(54, 56, 56);
-    font-size: 1.7rem;
-    text-decoration: underline solid #797bf8 5px;
+    color: var(--light-black);
+    /* font-size: 1.65rem; */
+    text-decoration: underline solid var(--purple-underline) 5px;
 }
 
 /* about */
@@ -139,28 +170,6 @@ main#about p {
     margin: 1rem 0;
     font-size: 1.1rem;
     text-align: center;
-}
-
-/* faq */
-
-article#faq {
-    background: #E5E5E5; 
-    padding: 2.5rem;
-}
-
-article#faq .faq-question {
-    margin: 1.5rem 2rem;
-}
-
-article#faq .faq-question h4 {
-    text-align: left;
-    font-size: 1.27rem;
-    font-weight: 600;
-}
-
-article#faq .faq-question p {
-    font-size: 1rem;
-    font-weight: 500;
 }
 
 /* projects */
@@ -200,13 +209,34 @@ article#projects .projects img {
     -moz-border-radius: 0.8rem;
     -ms-border-radius: 0.8rem;
     -o-border-radius: 0.8rem;
-    border: 5px inset #5746f1af;
+    border: 5px inset var(--purple-border);
 }
+
+/* faq */
+
+article#faq {
+    padding: 2.5rem;
+}
+
+article#faq .faq-question {
+    margin: 1.5rem 2rem;
+}
+
+article#faq .faq-question h4 {
+    text-align: left;
+    font-size: 1.27rem;
+    font-weight: 600;
+}
+
+article#faq .faq-question p {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
 
 /* contacts */
 
 footer#contact {
-    background: #E5E5E5;
     text-align: center;
 }
 
@@ -249,23 +279,23 @@ footer#contact .contacts img:hover {
 }
 
 footer#contact .contacts a:nth-child(1) img:hover {
-    box-shadow: -10px 10px 5px 5px white, -15px 15px 5px 5px rgb(34, 152, 213);
+    box-shadow: -10px 10px 5px 5px white, -15px 15px 5px 5px var(--telegram);
 }
 
 footer#contact .contacts a:nth-child(2) img:hover {
-    box-shadow: -10px 10px 5px 5px white, -15px 15px 5px 5px rgb(70, 199, 86);
+    box-shadow: -10px 10px 5px 5px white, -15px 15px 5px 5px var(--whatsapp);
 }
 
 footer#contact .contacts a:nth-child(3) img:hover {
-    box-shadow: -10px 10px 5px 5px white, -15px 15px 5px 5px rgb(226, 227, 21);
+    box-shadow: -10px 10px 5px 5px white, -15px 15px 5px 5px var(--email);
 }
 
 footer#contact .contacts a:nth-child(4) img:hover {
-    box-shadow: -10px 10px 5px 5px white, -15px 15px 5px 5px rgb(0, 132, 177);
+    box-shadow: -10px 10px 5px 5px white, -15px 15px 5px 5px var(--linkedin);
 }
 
 footer#contact .contacts a:nth-child(5) img:hover {
-    box-shadow: -10px 10px 5px 5px white, -15px 15px 5px 5px rgb(254, 216, 117);
+    box-shadow: -10px 10px 5px 5px white, -15px 15px 5px 5px var(--instagram);
 
 }
 
