@@ -62,11 +62,10 @@ h2 {
 /* Header */
 
 body>header.backgroundFull {
-    background: /* linear-gradient(#e5e5e57e, #e5e5e57e),*/ url(../background/background-banner.jpeg) no-repeat,  black;
+    background:  url(../background/background-banner.jpeg) no-repeat,  black;
     background-size: contain;
     background-attachment: scroll;
     background-position: center;
-    /* background */
     height: auto;
     background-clip: content-box;
 }
@@ -85,10 +84,6 @@ header #menuButton {
     left: 1.5rem;
     width: 4rem;
     height: 4rem;
-    /* min-width: 10vw;
-    min-height: 10vw; */
-    /* max-width: 200px;
-    max-height: 200px; */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -155,7 +150,6 @@ header nav#menuList a {
 
 header nav#menuList a:hover {
     color: var(--light-black);
-    /* font-size: 1.65rem; */
     text-decoration: underline solid var(--purple-underline) 5px;
 }
 
@@ -269,8 +263,6 @@ footer#contact .contacts img {
 }
 
 footer#contact .contacts img:hover {
-    /* box-shadow: -10px 10px 10px 5px white, -15px 15px black; */
-
     transform: rotateX(45deg) rotateZ(-45deg) translate(15px, -15px);
     -webkit-transform: rotateX(45deg) rotateZ(-45deg) translate(15px, -15px);
     -moz-transform: rotateX(45deg) rotateZ(-45deg) translate(15px, -15px);
@@ -296,7 +288,6 @@ footer#contact .contacts a:nth-child(4) img:hover {
 
 footer#contact .contacts a:nth-child(5) img:hover {
     box-shadow: -10px 10px 5px 5px white, -15px 15px 5px 5px var(--instagram);
-
 }
 
 
