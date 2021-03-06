@@ -174,6 +174,13 @@ article#projects {
     padding: 2rem;
 }
 
+article#projects div{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;  
+}
+
 article#projects .projects {
     margin: 1rem;
     transition: transform 0.3s;
