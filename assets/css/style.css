@@ -241,13 +241,12 @@ article#faq .faq-question p {
 footer#contact {
     text-align: center;
     background: url("../background/background-codigo.jpg") no-repeat;
-    background-size: 100%;
+    background-size: 100% 100%;
 }
 
 footer#contact div {
     backdrop-filter: blur(3px);
 }
-
 
 footer#contact > * {
     z-index: 10;
@@ -256,7 +255,7 @@ footer#contact > * {
 footer#contact h2 {
     display: inline-block;
     margin-top: 1rem;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 footer#contact .contacts {
@@ -266,6 +265,7 @@ footer#contact .contacts {
 footer#contact .contacts img ,
 footer#contact .contacts a {
     width: 4.5rem;
+    margin: 0.5%;
 }
 
 footer#contact .contacts img {
@@ -309,14 +309,13 @@ footer#contact .contacts a:nth-child(5) img:hover {
     box-shadow: -10px 10px 5px 5px white, -15px 15px 5px 5px var(--instagram);
 }
 
-
 footer#contact .contacts a {
     margin: 1rem;
 }
 
 footer#contact span {
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 600;
     display: inline-block;
     margin-bottom: 1rem;
 }
