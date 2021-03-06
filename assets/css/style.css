@@ -240,6 +240,17 @@ article#faq .faq-question p {
 
 footer#contact {
     text-align: center;
+    background: url("../background/background-codigo.jpg") no-repeat;
+    background-size: 100%;
+}
+
+footer#contact div {
+    backdrop-filter: blur(3px);
+}
+
+
+footer#contact > * {
+    z-index: 10;
 }
 
 footer#contact h2 {
