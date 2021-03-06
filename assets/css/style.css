@@ -235,6 +235,10 @@ article#faq .faq-question p {
     font-weight: 500;
 }
 
+article#faq .faq-question .link {
+    color: blue;
+    text-decoration: underline;
+}
 
 /* contacts */
 
