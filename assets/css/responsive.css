@@ -5,13 +5,13 @@
         height: 5rem;
         max-height: 70px;
 
-        top: 4rem;
-        left: 1.5rem;
+        top: 12rem;
+        left: 2rem;
     }
 
     header span.sr-only {
         position: relative;
-        overflow:auto;
+        overflow: auto;
 
         margin: 5px;
     }
