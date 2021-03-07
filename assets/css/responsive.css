@@ -23,7 +23,8 @@
     }
 
     header nav#menuList {
-        top: 5rem;
+        left: 2rem;
+        top: 13rem;
     }
 
     article#projects figure.projects:hover {
