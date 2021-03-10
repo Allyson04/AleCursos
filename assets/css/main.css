@@ -162,7 +162,7 @@ footer#contact {
 }
 
 footer#contact div {
-    backdrop-filter: blur(3px);
+    /* backdrop-filter: blur(3px); */
 }
 
 footer#contact > * {
