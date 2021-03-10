@@ -3,7 +3,7 @@ let mode = true
 
 function toggleMenu() {
     if (mode) {
-        catchMenuStyle.left = "1.5rem"
+        catchMenuStyle.left = "2rem"
     } else {
         catchMenuStyle.left = "-15rem"
     }
