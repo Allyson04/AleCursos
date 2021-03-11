@@ -239,10 +239,10 @@ footer#contact span a {
 /* button go up */
 
 div#goUp {
+    z-index: 20;
     display: inline-block;
     width: 70px;
     height: 70px;
-
     background-color: rgba(255, 255, 255, 0.699);
     border: 1px solid black;
     border-radius: 50%;
@@ -250,14 +250,27 @@ div#goUp {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-
     padding: 1rem;
     text-align: center;
     position: fixed;
-    right: 10%;
-    bottom: 10%;
+    right: 4%;
+    bottom: 5%;
+    transition: background .6s, transform .4s;
+    -webkit-transition: background .6s, transform .4s;
+    -moz-transition: background .6s, transform .4s;
+    -ms-transition: background .6s, transform .4s;
+    -o-transition: background .6s, transform .4s;
+}
+
+div#goUp:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    background: rgba(200, 200, 200, 0.699);
 }
 
 div#goUp img {
-    width: 80%;
+    width: 95%;
 }
