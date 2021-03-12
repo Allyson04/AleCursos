@@ -10,3 +10,7 @@ function toggleMenu() {
 
     mode = !mode
 }
+
+function goUp() {
+    window.scrollTo(document.body.scrollHeight, 0);
+}
