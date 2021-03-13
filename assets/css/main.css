@@ -240,7 +240,7 @@ footer#contact span a {
 
 div#goUp {
     z-index: 20;
-    display: inline-block;
+    display: none;
     width: 70px;
     height: 70px;
     background-color: rgba(255, 255, 255, 0.699);
