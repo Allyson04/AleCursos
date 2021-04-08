@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUTOMACODE</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/icons/automacodeLogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+</head>
+<body>
+    <header class="backgroundFull">
+        <h1 class="sr-only">Automacode</h1>
+        <div id="menuButton" onclick="toggleMenu()">
+            <span class="sr-only">Menu</span>
+            <svg viewBox="0 0 100 80">
+                <rect width="100" height="20"></rect>
+                <rect y="30" width="100" height="20"></rect>
+                <rect y="60" width="100" height="20"></rect>
+            </svg>
+        </div>
+        <nav id="menuList" onclick="toggleMenu()">
+            <a href="index.html#about">Sobre</a>
+            <a href="index.html#projects">Projetos</a>
+            <a href="colaborators.html#colaborators">Colaboradores</a>
+            <a href="index.html#faq">FAQ</a>
+            <a href="#contact">Contato</a>
+        </nav>
+    </header>
+
+    <main id="about" class="backgroundFull">
+        <h2>A Tecnologia em apenas 1 Play!</h2>
+        <p>
+            A ideia da Automacode é ajudar pessoas ao máximo no quesito Tecnologia, disponibilizando treinamentos, certificados, todos voltados para a Área da Qualidade.
+        </p>
+        <p>
+            Temos mais de 50 empresas em contato para receber o currículo de todos que estão participando com o foco de ganhar oportunidades após treinamentos.
+            Temos pessoas dedicadas ao acompanhamento dos alunos até entenderem e conseguirem se desenvolver.
+        </p>
+    </main>
+
+    <article id="faq" class="backgroundFull">
+        <h2>Questões Frequentes (FAQ)</h2>
+        <section class="faq-question">
+            <h4>1 - Como posso me inscrever?</h4>
+            <p>
+                Basta acessar o Link <span class="link">https://t.me/joinchat/RZ_6BfQ4RrzvaIpd</span>, após isso será enviado o link para acessar o Telegram ou Whatsapp.
+            </p>
+        </section>
+        <section class="faq-question">
+            <h4>2 - Não tenho dinheiro! Tem algum curso grátis?</h4>
+            <p>
+                <mark>Todos os Cursos são GRATUITOS, zero custo de nada!</mark>
+            </p>
+        </section>
+        <section class="faq-question">
+            <h4>3 - Vou receber certificado ao final do curso?</h4>
+            <p>
+                Claro! Após ter <strong>assistido as aulas</strong> e ter sido <strong>aprovado o seu trabalho final</strong>, você terá acesso ao Certificado sem custo adicional.
+            </p>
+        </section>
+        <section class="faq-question">
+            <h4>4 - Seu certificado é reconhecido pelo MEC?</h4>
+            <p>
+                Todos os certificados de nossos cursos são reconhecido pelo MEC, não importa qual curso seja.
+            </p>
+        </section>
+        <section class="faq-question">
+            <h4>5 - Por onde vou acompanhar os treinamentos?</h4>
+            <p>
+                Nós temos Grupos de apoio no <strong>Whatsapp</strong> e no <strong>Telegram</strong>, as <mark>informações passadas aos dois grupos são as mesmas.</mark>
+            </p>
+        </section>
+        
+    </article>
+
+    <footer id="contact" class="backgroundFull">
+        <h2>Contato</h2>
+            <section class="contacts">
+                <a href="https://t.me/joinchat/RZ_6BfQ4RrzvaIpd"><img src="assets/icons/telegramLogo.png" alt="Logo do Telegram"></a>
+                <a href="https://chat.whatsapp.com/E8kMgW9oBux8Fk5TMg55vE"><img src="assets/icons/whatsappLogo.png" alt="Logo do Whatsapp"></a></a>
+                <a href="mailto:automacodeplay@gmail.com"><img src="assets/icons/mailLogo.png" alt="Logo de E-mail"></a></a>
+                <a href="https://www.linkedin.com/company/automacodequalidadedesoftware/"><img src="assets/icons/linkedinLogo.png" alt="Logo do LinkedIn"></a></a>
+                <a href="https://www.instagram.com/automacode/"><img src="assets/icons/instagramLogo.png" alt="Logo do Instagram"></a></a>
+            </section>
+
+            <span>Copyright © 2021 by <a href="https://www.linkedin.com/in/wellington-s-86a030150/">Wellington Santos</a> | Todos os Direitos Reservados</span>
+    </footer>
+    
+    <div id="goUp" onclick="goUp()">
+        <img src="./assets/icons/up-arrow.svg" alt="Ir para o topo" title="Ir para o topo">
+    </div>
+
+    <script src="assets/scripts/script.js"></script>
+</body>
+</html>
