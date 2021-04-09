@@ -1,0 +1,39 @@
+/* about */
+
+main#about,
+main#colaborators {
+    padding: 20px;
+}
+
+main#about p {
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* faq */
+
+article#faq {
+    padding: 2.5rem;
+}
+
+article#faq .faq-question {
+    margin: 1.5rem 2rem;
+}
+
+article#faq .faq-question h4 {
+    text-align: left;
+    font-size: 1.27rem;
+    font-weight: 600;
+}
+
+article#faq .faq-question p {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+article#faq .faq-question .link {
+    color: blue;
+    text-decoration: underline;
+}
