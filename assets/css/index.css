@@ -13,21 +13,17 @@ article#projects h2 {
 
 article#projects h2 img {
     height: 2rem; 
-    margin-right: 10px;
     vertical-align: middle;
 }
 
 article#projects > div{
     width: auto;
-    padding: 5vw 0;
-    display: flex;
-    overflow: auto;
 }
 
 article#projects .projects {
     width: auto;
     text-align: center;
-    margin: 0 24vw;
+    margin: 15vw 24vw;
     border: 1px solid #000;
     transition: transform 0.3s;
     -webkit-transition: transform 0.3s;
@@ -41,6 +37,11 @@ article#projects .projects {
     -o-border-radius: 0.2rem;
 
     background: rgb(37, 37, 37);
+}
+
+.projects:nth-child(3) {
+    background: red;
+
 }
 
 article#projects .projects:hover {
