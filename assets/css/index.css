@@ -18,18 +18,24 @@ article#projects h2 img {
 
 article#projects > div{
     width: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
 }
 
 article#projects .projects {
     width: auto;
-    text-align: center;
-    margin: 15vw 24vw;
-    border: 1px solid #000;
+    max-width: 300px;
+
+    margin: 5vw 2rem;
     transition: transform 0.3s;
     -webkit-transition: transform 0.3s;
     -moz-transition: transform 0.3s;
     -ms-transition: transform 0.3s;
     -o-transition: transform 0.3s;
+
+    border: 1px solid #000;
     border-radius: 0.2rem;
     -webkit-border-radius: 0.2rem;
     -moz-border-radius: 0.2rem;
@@ -53,9 +59,14 @@ article#projects .projects:hover {
 }
 
 article#projects .projects img {
-    width: 52vw;
-    /*width: min(20rem, 400px);
-    */border-radius: 0.2rem;
+    /* width: 52vw; */
+    /* height: 52vw; */
+    
+    height: min(20rem, 400px);
+    width: min(20rem, 400px);
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 0.2rem;
     -webkit-border-radius: 0.2rem;
     -moz-border-radius: 0.2rem;
     -ms-border-radius: 0.2rem;
