@@ -104,15 +104,3 @@ article#projects .projects label {
     -o-border-radius: 3px;
 }
 
-/* 
-article#projects .projects:nth-child(1) {
-    background: green;
-}
-
-article#projects .projects:nth-child(2) {
-    background: blue;
-}
-
-article#projects .projects:nth-child(3) {
-    background: red;
-} */
