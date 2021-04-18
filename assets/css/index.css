@@ -2,23 +2,52 @@
 
 article#projects {
     text-align: center;
-    padding: 2rem;
+    /* padding: 2rem; */
+    height: auto;
 }
 
-article#projects div{
-    width: 100%;
+article#projects h2 {
+    margin-top: 5vw;
+    font-size: 1.7rem;
+}
+
+article#projects h2 img {
+    height: 2rem; 
+    vertical-align: middle;
+}
+
+article#projects > div{
+    width: auto;
+
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;  
+    justify-content: space-around; 
 }
 
 article#projects .projects {
-    margin: 1rem;
+    width: auto;
+    max-width: 300px;
+
+    margin: 5vw 2rem;
     transition: transform 0.3s;
     -webkit-transition: transform 0.3s;
     -moz-transition: transform 0.3s;
     -ms-transition: transform 0.3s;
     -o-transition: transform 0.3s;
+
+    border: 1px solid #000;
+    border-radius: 0.2rem;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    -ms-border-radius: 0.2rem;
+    -o-border-radius: 0.2rem;
+
+    background: rgb(37, 37, 37);
+}
+
+.projects:nth-child(3) {
+    background: red;
+
 }
 
 article#projects .projects:hover {
@@ -29,18 +58,61 @@ article#projects .projects:hover {
     -o-transform: scale(1.02);
 }
 
-article#projects .projects h3 {
-    font-size: 1.7rem;
-    margin: 0.5rem 0;
-}
-
 article#projects .projects img {
+    /* width: 52vw; */
+    /* height: 52vw; */
+    
     height: min(20rem, 400px);
     width: min(20rem, 400px);
-    border-radius: 0.8rem;
-    -webkit-border-radius: 0.8rem;
-    -moz-border-radius: 0.8rem;
-    -ms-border-radius: 0.8rem;
-    -o-border-radius: 0.8rem;
-    border: 5px inset var(--purple-border);
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 0.2rem;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    -ms-border-radius: 0.2rem;
+    -o-border-radius: 0.2rem;
 }
+
+article#projects .projects h3 {
+    font-size: 110%;
+    margin-bottom: 0.5rem;
+    color: #16E6DA;
+}
+
+article#projects .projects p {
+    color: #E5B611;
+}
+
+article#projects .projects div {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+article#projects .projects label {
+    border: 1px solid black;
+    background: black;
+    color: white;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+/* 
+article#projects .projects:nth-child(1) {
+    background: green;
+}
+
+article#projects .projects:nth-child(2) {
+    background: blue;
+}
+
+article#projects .projects:nth-child(3) {
+    background: red;
+} */
