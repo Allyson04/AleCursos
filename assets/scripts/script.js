@@ -26,3 +26,25 @@ function goUp() {
 //     // console.log(getSearchBar.style.display === "none")
 //     getSearchBar.style.display === "block" ? getSearchBar.style.display = "none" : getSearchBar.style.display = "block"
 // }
+
+//adding event listener in case of change on the search bar
+getSearchBarForm.addEventListener("change", searchCourses)
+
+function searchCourses() {
+    //clear console to better refresh of info
+    console.clear()
+
+    let checkedInputs = Array()
+
+    //defining which element where checked and identifying it with his id
+    for(i=1;i<=8;i++) {
+        n = i*2-1
+
+        let getInput = document.querySelector("form#searchBarForm input:nth-child(" + n + ")")
+        if(getInput.checked === true) {
+             checkedInputs[i] = getInput.id
+        }
+    }
+    checkedInputs = defineCheckedCourses(checkedInputs)
+    // console.log(checkedInputs)
+}
