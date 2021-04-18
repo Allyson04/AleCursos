@@ -46,6 +46,21 @@ function searchCourses() {
         }
     }
     // console.log(checkedInputs)
+
+    toggleDisplayCourses(getAllCourses, "none")
+    for(i=1;i<=8;++i) {
+        // console.log(i)
+        if (checkedInputs[i] != null) {
+            // console.log(checkedInputs[i])
+            let elementsFounds = Array()
+            elementsFounds = document.querySelectorAll(".projects label[for=" + checkedInputs[i] + "]")
+            // console.log(elementsFounds)
+            for(n=0;n<elementsFounds.length;n++) {
+                elementsFounds[n].parentElement.parentElement.style.display = "block"
+            }
+        } 
+    }
+
 }
 
 //toggling display or hide all depending on which requisition
