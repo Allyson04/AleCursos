@@ -1,5 +1,7 @@
 const catchMenuStyle = document.getElementById("menuList").style
 const getSearchBar = document.getElementById("searchBar")
+const getSearchBarForm = document.querySelector("#searchBar form")
+const getAllCourses = document.querySelectorAll(".projects")
 
 let mode = true
 
@@ -17,10 +19,10 @@ function goUp() {
     window.scrollTo(document.body.scrollHeight, 0);
 }
 
-getSearchBar.style.display = "none"
+// getSearchBar.style.display = "none"
 
-function toggleSearch() {
+// function toggleSearch() {
 
-    // console.log(getSearchBar.style.display === "none")
-    getSearchBar.style.display === "block" ? getSearchBar.style.display = "none" : getSearchBar.style.display = "block"
-}
+//     // console.log(getSearchBar.style.display === "none")
+//     getSearchBar.style.display === "block" ? getSearchBar.style.display = "none" : getSearchBar.style.display = "block"
+// }
