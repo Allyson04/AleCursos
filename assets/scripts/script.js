@@ -45,6 +45,12 @@ function searchCourses() {
              checkedInputs[i] = getInput.id
         }
     }
-    checkedInputs = defineCheckedCourses(checkedInputs)
     // console.log(checkedInputs)
+}
+
+//toggling display or hide all depending on which requisition
+function toggleDisplayCourses(getAllCourses, wantedState) {
+    for(n=0;n<getAllCourses.length;n++) {
+        getAllCourses[n].style.display = wantedState
+    }
 }
