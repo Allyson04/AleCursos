@@ -35,8 +35,18 @@ function searchCourses() {
     console.clear()
 
     let checkedInputs = Array()
+    checkedInputs = defineCheckedCourses(checkedInputs)
+    // console.log(checkedInputs)
 
-    //defining which element where checked and identifying it with his id
+    //this structure will define which elements will be shown
+    hideUnwantedCourses(checkedInputs)
+    
+    //scenario where no checkbox is checked, all courses will be displayed
+    displayAllCourses(checkedInputs, getAllCourses)
+}
+
+//defining which element where checked and identifying it with his id
+function defineCheckedCourses(checkedInputs) {
     for(i=1;i<=8;i++) {
         n = i*2-1
 
@@ -45,8 +55,26 @@ function searchCourses() {
              checkedInputs[i] = getInput.id
         }
     }
-    // console.log(checkedInputs)
+    
+    return checkedInputs
+}
 
+//toggling display or hide all depending on which requisition
+function toggleDisplayCourses(getAllCourses, wantedState) {
+    for(n=0;n<getAllCourses.length;n++) {
+        getAllCourses[n].style.display = wantedState
+    }
+}
+
+//scenario where no checkbox is checked, all courses will be displayed
+function displayAllCourses(checkedInputs, getAllCourses) {
+    if (checkedInputs.length === 0) {
+        // console.log(getAllCourses)
+        toggleDisplayCourses(getAllCourses, "block")
+    } 
+}
+ 
+function hideUnwantedCourses(checkedInputs) {
     toggleDisplayCourses(getAllCourses, "none")
     for(i=1;i<=8;++i) {
         // console.log(i)
@@ -59,18 +87,5 @@ function searchCourses() {
                 elementsFounds[n].parentElement.parentElement.style.display = "block"
             }
         } 
-    }
-
-    if (checkedInputs.length === 0) {
-        // console.log(getAllCourses)
-        toggleDisplayCourses(getAllCourses, "block")
-    } 
-
-}
-
-//toggling display or hide all depending on which requisition
-function toggleDisplayCourses(getAllCourses, wantedState) {
-    for(n=0;n<getAllCourses.length;n++) {
-        getAllCourses[n].style.display = wantedState
     }
 }
