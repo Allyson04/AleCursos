@@ -61,6 +61,11 @@ function searchCourses() {
         } 
     }
 
+    if (checkedInputs.length === 0) {
+        // console.log(getAllCourses)
+        toggleDisplayCourses(getAllCourses, "block")
+    } 
+
 }
 
 //toggling display or hide all depending on which requisition
