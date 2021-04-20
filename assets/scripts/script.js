@@ -41,6 +41,7 @@ Modals = {
     }
 
 }
+
 //adding event listener in case of change on the search bar
 getSearchBarForm.addEventListener("change", searchCourses)
 
@@ -49,57 +50,65 @@ function searchCourses() {
     console.clear()
 
     let checkedInputs = Array()
-    checkedInputs = defineCheckedCourses(checkedInputs)
+    checkedInputs = SearchUtils.defineCheckedCourses(checkedInputs)
     // console.log(checkedInputs)
 
     //this structure will define which elements will be shown
-    hideUnwantedCourses(checkedInputs)
+    SearchUtils.hideUnwantedCourses(checkedInputs)
     
     //scenario where no checkbox is checked, all courses will be displayed
-    displayAllCourses(checkedInputs, getAllCourses)
+    SearchUtils.displayAllCourses(checkedInputs, getAllCourses)
 }
 
-//defining which element where checked and identifying it with his id
-function defineCheckedCourses(checkedInputs) {
-    for(i=1;i<=8;i++) {
-        n = i*2-1
+SearchUtils = {
+    //defining which element where checked and identifying it with his id
+    defineCheckedCourses(checkedInputs) {
+        for(i=1;i<=8;i++) {
+            n = i*2-1
 
-        let getInput = document.querySelector("#searchBar form input:nth-child(" + n + ")")
-        if(getInput.checked === true) {
-             checkedInputs[i] = getInput.id
+            let getInput = document.querySelector("#searchBar form input:nth-child(" + n + ")")
+            if(getInput.checked === true) {
+                checkedInputs[i] = getInput.id
+            }
+        }
+        
+        return checkedInputs
+    },
+
+    //toggling display or hide all depending on which requisition
+    toggleDisplayCourses(getAllCourses, wantedState) {
+        for(n=0;n<getAllCourses.length;n++) {
+            getAllCourses[n].style.display = wantedState
+        }
+    },
+    
+    //scenario where no checkbox is checked, all courses will be displayed
+    displayAllCourses(checkedInputs, getAllCourses) {
+        if (checkedInputs.length === 0) {
+            // console.log(getAllCourses)
+            SearchUtils.toggleDisplayCourses(getAllCourses, "block")
+        } 
+    },
+ 
+    //selecting and display only wanted courses
+    hideUnwantedCourses(checkedInputs) {
+        SearchUtils.toggleDisplayCourses(getAllCourses, "none")
+        for(i=1;i<=8;++i) {
+            // console.log(i)
+            if (checkedInputs[i] != null) {
+                // console.log(checkedInputs[i])
+                let elementsFounds = Array()
+                elementsFounds = document.querySelectorAll(".projects label[for=" + checkedInputs[i] + "]")
+                // console.log(elementsFounds)
+                for(n=0;n<elementsFounds.length;n++) {
+                    elementsFounds[n].parentElement.parentElement.style.display = "block"
+                }
+            } 
         }
     }
-    
-    return checkedInputs
+
+
 }
 
-//toggling display or hide all depending on which requisition
-function toggleDisplayCourses(getAllCourses, wantedState) {
-    for(n=0;n<getAllCourses.length;n++) {
-        getAllCourses[n].style.display = wantedState
-    }
-}
 
-//scenario where no checkbox is checked, all courses will be displayed
-function displayAllCourses(checkedInputs, getAllCourses) {
-    if (checkedInputs.length === 0) {
-        // console.log(getAllCourses)
-        toggleDisplayCourses(getAllCourses, "block")
-    } 
-}
- 
-function hideUnwantedCourses(checkedInputs) {
-    toggleDisplayCourses(getAllCourses, "none")
-    for(i=1;i<=8;++i) {
-        // console.log(i)
-        if (checkedInputs[i] != null) {
-            // console.log(checkedInputs[i])
-            let elementsFounds = Array()
-            elementsFounds = document.querySelectorAll(".projects label[for=" + checkedInputs[i] + "]")
-            // console.log(elementsFounds)
-            for(n=0;n<elementsFounds.length;n++) {
-                elementsFounds[n].parentElement.parentElement.style.display = "block"
-            }
-        } 
-    }
-}
+
