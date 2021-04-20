@@ -5,39 +5,42 @@ const getAllCourses = document.querySelectorAll(".projects")
 
 let mode = true
 
-function toggleMenu() {
-    if (mode) {
-        catchMenuStyle.left = "2rem"
-    } else {
-        catchMenuStyle.left = "-15rem"
-    }
+Modals = {
 
-    mode = !mode
-}
-
-//function to go to top of page
-function goUp() {
+    //function to go to top of page
+    goUp() {
     window.scrollTo(document.body.scrollHeight, 0);
-}
+    },
 
-//toggling display of searchBar form, with transitions
-function toggleSearch() {
-    document.getElementById("closeWord").classList.toggle("hide")
-    document.getElementById("openWord").classList.toggle("hide")
-    if( getSearchBarForm.style.display === "flex") {
-        getSearchBarForm.classList.toggle("topping")
-        setTimeout(function() {getSearchBarForm.style.display = "none"} ,300);
-        
-        // console.log("disable display")
+    //toggling display of searchBar form, with transitions
+    toggleSearch() {
+        document.getElementById("closeWord").classList.toggle("hide")
+        document.getElementById("openWord").classList.toggle("hide")
+        if( getSearchBarForm.style.display === "flex") {
+            getSearchBarForm.classList.toggle("topping")
+            setTimeout(function() {getSearchBarForm.style.display = "none"} ,300);
+            
+            // console.log("disable display")
 
-    } else {
-        getSearchBarForm.style.display = "flex"
-        setTimeout(function() {getSearchBarForm.classList.toggle("topping")} ,50);
+        } else {
+            getSearchBarForm.style.display = "flex"
+            setTimeout(function() {getSearchBarForm.classList.toggle("topping")} ,50);
 
-        // console.log("activating display")
+            // console.log("activating display")
+        }
+    },
+
+    toggleMenu() {
+        if (mode) {
+            catchMenuStyle.left = "2rem"
+        } else {
+            catchMenuStyle.left = "-15rem"
+        }
+    
+        mode = !mode
     }
-}
 
+}
 //adding event listener in case of change on the search bar
 getSearchBarForm.addEventListener("change", searchCourses)
 

@@ -15,7 +15,7 @@
 <body>
     <header class="backgroundFull">
         <h1 class="sr-only">Automacode</h1>
-        <div id="menuButton" onclick="toggleMenu()">
+        <div id="menuButton" onclick="Modals.toggleMenu()">
             <span class="sr-only">Menu</span>
             <svg viewBox="0 0 100 80">
                 <rect width="100" height="20"></rect>
@@ -23,7 +23,7 @@
                 <rect y="60" width="100" height="20"></rect>
             </svg>
         </div>
-        <nav id="menuList" onclick="toggleMenu()">
+        <nav id="menuList" onclick="Modals.toggleMenu()">
             <a href="about_faq.html#about">Sobre</a>
             <a href="index.html#projects">Projetos</a>
             <a href="colaborators.html#colaborators">Colaboradores</a>
@@ -35,7 +35,7 @@
     <article id="projects" class="backgroundFull">
         <h2><img src="./assets/icons/testIcon.svg" alt="Ícone de teste"> Projetos ou Treinamentos</h2>
 
-        <span onclick="toggleSearch()"><span id="openWord">Abrir</span><span id="closeWord" class="hide">Fechar</span> barra de Pesquisa</span>
+        <span onclick="Modals.toggleSearch()"><span id="openWord">Abrir</span><span id="closeWord" class="hide">Fechar</span> barra de Pesquisa</span>
         <section id="searchBar">
             <form action="" class="topping" style="display: none">
 
@@ -145,7 +145,7 @@
             <span>Copyright © 2021 by <a href="https://www.linkedin.com/in/wellington-s-86a030150/">Wellington Santos</a> | Todos os Direitos Reservados</span>
     </footer>
 
-    <div id="goUp" onclick="goUp()">
+    <div id="goUp" onclick="Modals.goUp()">
         <img src="./assets/icons/up-arrow.svg" alt="Ir para o topo" title="Ir para o topo">
     </div>
 
