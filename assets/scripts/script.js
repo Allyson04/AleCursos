@@ -15,10 +15,12 @@ function toggleMenu() {
     mode = !mode
 }
 
+//function to go to top of page
 function goUp() {
     window.scrollTo(document.body.scrollHeight, 0);
 }
 
+//hiding searchBar and searchBarForm
 getSearchBarForm.style.display = "none"
 getSearchBarForm.classList.toggle("topping")
 
