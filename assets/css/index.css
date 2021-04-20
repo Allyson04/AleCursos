@@ -2,6 +2,10 @@
     right: 100vw;
 }
 
+.hide {
+    display: none;
+}
+
 #projects h2 {
     position: relative;
     z-index: 2;

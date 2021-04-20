@@ -26,6 +26,8 @@ getSearchBarForm.classList.toggle("topping")
 
 //toggling display of searchBar form, with transitions
 function toggleSearch() {
+    document.getElementById("closeWord").classList.toggle("hide")
+    document.getElementById("openWord").classList.toggle("hide")
     if( getSearchBarForm.style.display === "flex") {
         getSearchBarForm.classList.toggle("topping")
         setTimeout(function() {getSearchBarForm.style.display = "none"} ,300);
