@@ -20,10 +20,6 @@ function goUp() {
     window.scrollTo(document.body.scrollHeight, 0);
 }
 
-//hiding searchBar and searchBarForm
-getSearchBarForm.style.display = "none"
-getSearchBarForm.classList.toggle("topping")
-
 //toggling display of searchBar form, with transitions
 function toggleSearch() {
     document.getElementById("closeWord").classList.toggle("hide")
