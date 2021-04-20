@@ -50,7 +50,7 @@ function defineCheckedCourses(checkedInputs) {
     for(i=1;i<=8;i++) {
         n = i*2-1
 
-        let getInput = document.querySelector("form#searchBarForm input:nth-child(" + n + ")")
+        let getInput = document.querySelector("#searchBar form input:nth-child(" + n + ")")
         if(getInput.checked === true) {
              checkedInputs[i] = getInput.id
         }
