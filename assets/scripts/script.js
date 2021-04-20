@@ -19,13 +19,13 @@ function goUp() {
     window.scrollTo(document.body.scrollHeight, 0);
 }
 
-// getSearchBar.style.display = "none"
+getSearchBar.style.display = "none"
 
-// function toggleSearch() {
+function toggleSearch() {
 
-//     // console.log(getSearchBar.style.display === "none")
-//     getSearchBar.style.display === "block" ? getSearchBar.style.display = "none" : getSearchBar.style.display = "block"
-// }
+    // console.log(getSearchBar.style.display === "none")
+    getSearchBar.style.display === "block" ? getSearchBar.style.display = "none" : getSearchBar.style.display = "block"
+}
 
 //adding event listener in case of change on the search bar
 getSearchBarForm.addEventListener("change", searchCourses)
