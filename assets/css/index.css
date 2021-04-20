@@ -67,6 +67,9 @@ section#searchBar label:hover {
     border: 1px solid black;
 }
 
+section#searchBar input:checked + label {
+    background: gold;
+}
 
 section#searchBar input {
     display: none;
