@@ -68,6 +68,9 @@ body>header.backgroundFull {
     background-attachment: scroll;
     background-position: center;
     background-clip: content-box;
+
+    position: relative;
+    z-index: 2;
 }
 
 header h1 {

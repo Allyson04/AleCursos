@@ -1,9 +1,30 @@
-section#searchBar form {
+.topping {
+    right: 100vw;
+}
+
+#projects h2 {
+    position: relative;
+    z-index: 2;
+    /* background: white; */
+}
+
+section#searchBar {
+    position: relative;
+}
+
+section form {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
     margin-top: 2rem;
+    right: 0;
+    z-index: 0;
+    position: relative;
+    transition: right 0.5s;
+    -webkit-transition: right 0.5s;
+    -moz-transition: right 0.5s;
+    -ms-transition: right 0.5s;
+    -o-transition: right 0.5s;
 }
 
 /*with logos inside label*/

@@ -19,12 +19,23 @@ function goUp() {
     window.scrollTo(document.body.scrollHeight, 0);
 }
 
-getSearchBar.style.display = "none"
+getSearchBarForm.style.display = "none"
+getSearchBarForm.classList.toggle("topping")
 
+//toggling display of searchBar form, with transitions
 function toggleSearch() {
+    if( getSearchBarForm.style.display === "flex") {
+        getSearchBarForm.classList.toggle("topping")
+        setTimeout(function() {getSearchBarForm.style.display = "none"} ,300);
+        
+        // console.log("disable display")
 
-    // console.log(getSearchBar.style.display === "none")
-    getSearchBar.style.display === "block" ? getSearchBar.style.display = "none" : getSearchBar.style.display = "block"
+    } else {
+        getSearchBarForm.style.display = "flex"
+        setTimeout(function() {getSearchBarForm.classList.toggle("topping")} ,50);
+
+        // console.log("activating display")
+    }
 }
 
 //adding event listener in case of change on the search bar
