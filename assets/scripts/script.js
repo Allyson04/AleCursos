@@ -49,6 +49,10 @@ function searchCourses() {
     //clear console to better refresh of info
     console.clear()
 
+    document.getElementById("exception-Modal").style.display = "block"
+
+    SearchUtils.toggleDisplayCourses(getAllCourses, "block")
+
     let checkedInputs = Array()
     checkedInputs = SearchUtils.defineCheckedCourses(checkedInputs)
     // console.log(checkedInputs)
@@ -58,6 +62,8 @@ function searchCourses() {
     
     //scenario where no checkbox is checked, all courses will be displayed
     SearchUtils.displayAllCourses(checkedInputs, getAllCourses)
+
+    SearchUtils.test()
 }
 
 SearchUtils = {
@@ -87,13 +93,39 @@ SearchUtils = {
         if (checkedInputs.length === 0) {
             // console.log(getAllCourses)
             SearchUtils.toggleDisplayCourses(getAllCourses, "block")
-        } 
+        }
     },
+
+    test() {
+        let displayValueCourses = []
+
+        for(n=0;n<getAllCourses.length;n++) {
+            if(getAllCourses[n].style.display == "none") {
+                displayValueCourses[n] = "hidden"
+            }
+
+        }
+        console.log(displayValueCourses)
+
+        displayValueCourses.filter(function(value) {return value === "hidden"})
+        console.log(displayValueCourses)
+
+
+        if (displayValueCourses === "hidden") {
+            console.log(displayValueCourses)
+            document.getElementById("exception-Modal").style.display = "block"
+    
+        }
+        console.log(displayValueCourses)
+       
+
+    },
+
  
     //selecting and display only wanted courses
     hideUnwantedCourses(checkedInputs) {
         SearchUtils.toggleDisplayCourses(getAllCourses, "none")
-        for(i=1;i<=8;++i) {
+        for(i=1;i<=checkedInputs.length;++i) {
             // console.log(i)
             if (checkedInputs[i] != null) {
                 // console.log(checkedInputs[i])

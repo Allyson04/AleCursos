@@ -6,6 +6,10 @@
     display: none;
 }
 
+.exception {
+    margin-bottom: 10rem;
+}
+
 #projects h2 {
     position: relative;
     z-index: 2;
