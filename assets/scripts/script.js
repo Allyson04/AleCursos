@@ -28,70 +28,73 @@ projects = [
     }
 ]
 
-//here is created every project 'banner', this function will be done for each object inside 'projects'
-function createProjects(project, index, projects) {
-    //figureProject is the full project, with image and title (except labels)
-    let figureProject = document.createElement('figure')
+createProjectsUtils = {
+    //here is created every project 'banner', this function will be done for each object inside 'projects'
+    createProjects(project, index, projects) {
+        //figureProject is the full project, with image and title (except labels)
+        let figureProject = document.createElement('figure')
 
-    //labelProject is the element with his labels
-    labelProject = document.createElement('div')
-    
-    //adding the elements of innerProject() to figureProject
-    figureProject.innerHTML = innerProject(project, index, projects)
+        //labelProject is the element with his labels
+        labelProject = document.createElement('div')
+        
+        //adding the elements of innerProject() to figureProject
+        figureProject.innerHTML = createProjectsUtils.innerProject(project, index, projects)
 
-    //inserting project inside '#projects-division'
-    document.querySelector("#projects-division").appendChild(figureProject)
-    
-    //inserting 'labels' inside 'div' after paragraph 'Tecnlogias usadas' 
-    document.querySelector("#projects-division figure:nth-child(" + (index+2) + ") figure div").appendChild(labelProject)
-}
+        //inserting project inside '#projects-division'
+        document.querySelector("#projects-division").appendChild(figureProject)
+        
+        //inserting 'labels' inside 'div' after paragraph 'Tecnlogias usadas' 
+        document.querySelector("#projects-division figure:nth-child(" + (index+2) + ") figure div").appendChild(labelProject)
+    },
 
-function innerProject(project, index, projects) {
-    //creating labels of project
-    createLabels(project, index, projects)
+    innerProject(project, index, projects) {
+        //creating labels of project
+        createProjectsUtils.createLabels(project, index, projects)
 
-    //declaring template string of project
-    const projectStructure = `
-    <figure class="projects">
-        <img src="${project.banner}" alt="${project.title}">
-        <h3>${project.title}</h3>
-        <p>Tecnlogias usadas:</p>
-        <div>
+        //declaring template string of project
+        const projectStructure = `
+        <figure class="projects">
+            <img src="${project.banner}" alt="${project.title}">
+            <h3>${project.title}</h3>
+            <p>Tecnlogias usadas:</p>
+            <div>
 
-        </div>
-    </figure>
-    `
+            </div>
+        </figure>
+        `
 
-    return projectStructure
-}
+        return projectStructure
+    },
 
-function createLabels(project, index, projects) {
-    //console.log("object now being used")
-    // console.log(project)
+    createLabels(project, index, projects) {
+        //console.log("object now being used")
+        // console.log(project)
 
-    //catching every element of array "tags"
-    projects[index].tags.forEach(function(project, index, projects) {
-        //in this case, the structure is like: array 'projects' have object 'project' (from createProjects function), and inside it we have an array 'tags' with strings 'project' (from this function, for example 'cypress')
+        //catching every element of array "tags"
+        projects[index].tags.forEach(function(project, index, projects) {
+            //in this case, the structure is like: array 'projects' have object 'project' (from createProjects function), and inside it we have an array 'tags' with strings 'project' (from this function, for example 'cypress')
 
-        //here we are adding every element of 'tags' to labelProject, so labelProject is and collection of all tags
-        labelProject.innerHTML += innerLabel(project, index, projects)
-    }) 
-    
-    //checking how is labelProject after each round
-    // console.log("labelProject in " + (index+1) + " cycle")
-    // console.log(labelProject)
-    
-    return labelProject
-}
+            //here we are adding every element of 'tags' to labelProject, so labelProject is and collection of all tags
+            labelProject.innerHTML += createProjectsUtils.innerLabel(project, index, projects)
+        }) 
+        
+        //checking how is labelProject after each round
+        // console.log("labelProject in " + (index+1) + " cycle")
+        // console.log(labelProject)
+        
+        return labelProject
+    },
 
-function innerLabel(project, index, projects) {
-    //labelTags is an template string for each label
-    const labelTags = `<label for="${project}">${project}</label>`
-    return labelTags
+    innerLabel(project, index, projects) {
+        //labelTags is an template string for each label
+        const labelTags = `<label for="${project}">${project}</label>`
+        return labelTags
+    }
+
 }
 
 //function to generate every project 'banner'
-projects.forEach(createProjects) 
+projects.forEach(createProjectsUtils.createProjects) 
 
 Modals = {
 
