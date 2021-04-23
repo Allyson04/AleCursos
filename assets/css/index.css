@@ -218,6 +218,7 @@ article#projects .projects div {
 }
 
 article#projects .projects label {
+    text-transform: capitalize;
     border: 1px solid black;
     background: black;
     color: white;

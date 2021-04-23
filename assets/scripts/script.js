@@ -11,20 +11,20 @@ projects = [
         id: 1,
         title: "Treinamento Básico de Automação Web com Cypress",
         banner: "assets/banner/banner_cypress.png",
-        tags: ["Cypress", "Circleci", "Cucumber","Mochawesome"]
+        tags: ["cypress", "circleci", "cucumber","mochawesome"]
     },
     {
         id: 2,
         title: "Treinamento do zero para Formação QA",
         banner: "assets/banner/banner_qa_fundaments.jpeg",
-        tags: ["Quality Assurance", "Postman"]
+        tags: ["QA", "postman"]
     },
     {
         id: 3,
         title: "Treinamento Básico de Automação Web com Cypress 2.0",
         banner: "assets/banner/banner_cypress.png",
     
-        tags: ["Cypress", "Circleci", "Cucumber"]
+        tags: ["cypress", "circleci", "cucumber"]
     }
 ]
 
@@ -146,7 +146,7 @@ function searchCourses() {
 
     let checkedInputs = Array()
     checkedInputs = SearchUtils.defineCheckedCourses(checkedInputs)
-    // console.log(checkedInputs)
+    console.log(checkedInputs)
 
     //this structure will define which elements will be shown
     SearchUtils.hideUnwantedCourses(checkedInputs)
@@ -214,10 +214,10 @@ SearchUtils = {
             }
 
         }
-        console.log(displayValueCourses)
+        // console.log(displayValueCourses)
 
         displayValueCourses.filter(function(value) {return value === "hidden"})
-        console.log(displayValueCourses)
+        // console.log(displayValueCourses)
 
 
         if (displayValueCourses === "hidden") {
@@ -225,7 +225,7 @@ SearchUtils = {
             document.getElementById("exception-Modal").style.display = "block"
     
         }
-        console.log(displayValueCourses)
+        // console.log(displayValueCourses)
        
     }
 
