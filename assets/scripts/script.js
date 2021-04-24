@@ -1,26 +1,25 @@
 const catchMenuStyle = document.getElementById("menuList").style
 const getSearchBar = document.getElementById("searchBar")
 const getSearchBarForm = document.querySelector("#searchBar form")
-const getAllCourses = document.querySelectorAll(".projects")
 
 let mode = true
 
 let projects = []
 projects = [
     {
-        id: 1,
+        id: 0,
         title: "Treinamento Básico de Automação Web com Cypress",
         banner: "assets/banner/banner_cypress.png",
         tags: ["cypress", "circleci", "cucumber","mochawesome"]
     },
     {
-        id: 2,
+        id: 1,
         title: "Treinamento do zero para Formação QA",
         banner: "assets/banner/banner_qa_fundaments.jpeg",
         tags: ["QA", "postman"]
     },
     {
-        id: 3,
+        id: 2,
         title: "Treinamento Básico de Automação Web com Cypress 2.0",
         banner: "assets/banner/banner_cypress.png",
     
@@ -93,6 +92,7 @@ createProjectsUtils = {
 
 }
 
+
 //function to generate every project 'banner'
 projects.forEach(createProjectsUtils.createProjects) 
 
@@ -136,33 +136,44 @@ Modals = {
 //adding event listener in case of change on the search bar
 getSearchBarForm.addEventListener("change", searchCourses)
 
+const getAllCourses = document.querySelectorAll(".projects")
+
 function searchCourses() {
     //clear console to better refresh of info
     console.clear()
 
-    document.getElementById("exception-Modal").style.display = "block"
-
-    SearchUtils.toggleDisplayCourses(getAllCourses, "block")
-
-    let checkedInputs = Array()
+    checkedInputs = Array()
     checkedInputs = SearchUtils.defineCheckedCourses(checkedInputs)
-    console.log(checkedInputs)
+    // console.log(checkedInputs)
 
-    //this structure will define which elements will be shown
-    SearchUtils.hideUnwantedCourses(checkedInputs)
-    
+    // hiding all courses
+    SearchUtils.toggleDisplayCourses("none")
+
+    //this structure will define which elements correspond to the checked inputs
+    function defineEqualProjects() {
+        foundProjectSearches = []
+        projects.forEach(SearchUtils.searchProjects)
+    }
+
+    defineEqualProjects()
+    // console.log(foundProjectSearches)
+
+    SearchUtils.showCorrectCourses(foundProjectSearches, "block")
+
     //scenario where no checkbox is checked, all courses will be displayed
-    SearchUtils.displayAllCourses(checkedInputs, getAllCourses)
+    SearchUtils.displayAllCourses(checkedInputs)
 
-    SearchUtils.test()
+    // SearchUtils.test()
+
+
 }
 
 SearchUtils = {
     
-    //toggling display or hide all depending on which requisition
-    toggleDisplayCourses(getAllCourses, wantedState) {
-        for(n=0;n<getAllCourses.length;n++) {
-            getAllCourses[n].style.display = wantedState
+    //toggling display or hide all projects depending on which requisition
+    toggleDisplayCourses(wantedState) {
+        for(i=0;i<getAllCourses.length;i++) {
+            getAllCourses[i].style.display = wantedState
         }
     },
     
@@ -177,23 +188,45 @@ SearchUtils = {
             }
         }
         
+        //filtering empty elements in checkedInputs
+        checkedInputs = checkedInputs.filter(function() {return true;})
+
         return checkedInputs
     },
  
-    //selecting and display only wanted courses
-    hideUnwantedCourses(checkedInputs) {
-        SearchUtils.toggleDisplayCourses(getAllCourses, "none")
-        for(i=1;i<=checkedInputs.length;++i) {
-            // console.log(i)
-            if (checkedInputs[i] != null) {
-                // console.log(checkedInputs[i])
-                let elementsFounds = Array()
-                elementsFounds = document.querySelectorAll(".projects label[for=" + checkedInputs[i] + "]")
-                // console.log(elementsFounds)
-                for(n=0;n<elementsFounds.length;n++) {
-                    elementsFounds[n].parentElement.parentElement.style.display = "block"
+    //defining which element correspond with the checked inputs
+    searchProjects(project, index, projects) {
+        //resetting projectCheckList
+        projectCheckList = []
+
+        for(i=0;i<checkedInputs.length;i++) {
+            //checking if each element is found on this specific project
+            project.tags.indexOf(checkedInputs[i]) != -1 ? projectCheckList[i] = true : projectCheckList[i] = false
+
+        }
+
+        //now verifying if all value in projectCheckList is true, then approving 
+        if(projectCheckList.indexOf(false) == -1) {
+            // console.log("correct")
+
+            foundProjectSearches.push(project.id)
+        } else {
+            // console.log("wrong")
+        }         
+            } 
                 }
             } 
+        }         
+            } 
+        }         
+    },
+
+    //function used exclusively to show searched Projects
+    showCorrectCourses(wantedArray, wantedState) {
+        for(i=0;i<wantedArray.length;i++) {
+            n = (wantedArray[i])
+            
+            getAllCourses[n].style.display = wantedState
         }
     },
 
