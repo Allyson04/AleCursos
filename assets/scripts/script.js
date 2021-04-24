@@ -231,10 +231,9 @@ SearchUtils = {
     },
 
     //scenario where no checkbox is checked, all courses will be displayed
-    displayAllCourses(checkedInputs, getAllCourses) {
+    displayAllCourses(checkedInputs) {
         if (checkedInputs.length === 0) {
-            // console.log(getAllCourses)
-            SearchUtils.toggleDisplayCourses(getAllCourses, "block")
+            SearchUtils.toggleDisplayCourses("block")
         }
     },
 
