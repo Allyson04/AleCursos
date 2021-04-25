@@ -213,8 +213,8 @@ SearchUtils = {
         } else {
             // console.log("wrong")
         }         
-            }     
     },
+    
 
     //function used exclusively to show searched Projects
     showCorrectCourses(wantedArray, wantedState) {
