@@ -158,16 +158,12 @@ getSearchBarForm.addEventListener("change", searchCourses)
 const getAllCourses = document.querySelectorAll(".projects")
 
 function searchCourses() {
-    //clear console to better refresh of info
-    console.clear()
+    //clear display of projects and console
+    SearchUtils.resetDisplays()
 
-    // document.getElementById("exception-Modal").style.display = "none"
     checkedInputs = Array()
     checkedInputs = SearchUtils.defineCheckedCourses(checkedInputs)
     // console.log(checkedInputs)
-
-    // hiding all courses
-    SearchUtils.toggleDisplayCourses("none")
 
     //this structure will define which elements correspond to the checked inputs
     function defineEqualProjects() {
@@ -184,11 +180,16 @@ function searchCourses() {
     SearchUtils.displayAllCourses(checkedInputs)
 
     SearchUtils.noFoundProjects()
-
-
 }
 
 SearchUtils = {
+    resetDisplays() {
+        //clear console to better refresh of info
+        console.clear()
+
+        // hiding all courses
+        SearchUtils.toggleDisplayCourses("none")
+    },
     
     //toggling display or hide all projects depending on which requisition
     toggleDisplayCourses(wantedState) {
