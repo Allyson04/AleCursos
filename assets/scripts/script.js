@@ -43,7 +43,7 @@ createProjectsUtils = {
         document.querySelector("#projects-division").appendChild(figureProject)
         
         //inserting 'labels' inside 'div' after paragraph 'Tecnlogias usadas' 
-        document.querySelector("#projects-division figure:nth-child(" + (index+2) + ") figure div").appendChild(labelProject)
+        document.querySelector("#projects-division figure:nth-child(" + (index+1) + ") figure div").appendChild(labelProject)
     },
 
     innerProject(project, index, projects) {
@@ -88,6 +88,25 @@ createProjectsUtils = {
         //labelTags is an template string for each label
         const labelTags = `<label for="${project}">${project}</label>`
         return labelTags
+    },
+
+    createExceptionNoFound(noFoundTagList) {
+        const exceptionNoFound = `
+            <h2>Houve um problema</h2>
+            <p class='exception'>Desculpe, mas no momento não possuímos um curso com:
+            </p>
+        `
+
+        return exceptionNoFound
+    },
+
+    innerTagsException(inputTag) {
+        const inputListStructure = `
+            <li>${inputTag}</li>
+        `
+        // console.log(inputListStructure)
+
+        return inputListStructure
     }
 
 }
@@ -142,6 +161,7 @@ function searchCourses() {
     //clear console to better refresh of info
     console.clear()
 
+    // document.getElementById("exception-Modal").style.display = "none"
     checkedInputs = Array()
     checkedInputs = SearchUtils.defineCheckedCourses(checkedInputs)
     // console.log(checkedInputs)
@@ -163,7 +183,7 @@ function searchCourses() {
     //scenario where no checkbox is checked, all courses will be displayed
     SearchUtils.displayAllCourses(checkedInputs)
 
-    // SearchUtils.test()
+    SearchUtils.noFoundProjects()
 
 
 }
@@ -232,30 +252,37 @@ SearchUtils = {
         }
     },
 
-    test() {
-        let displayValueCourses = []
+    noFoundProjects() {
+        exceptionNoFoundModal = document.getElementById("exception-Modal")
 
-        for(n=0;n<getAllCourses.length;n++) {
-            if(getAllCourses[n].style.display == "none") {
-                displayValueCourses[n] = "hidden"
-            }
-
+        //removing an exception if it exists
+        if (exceptionNoFoundModal != null) {
+            // console.log("removing exceptionNoFoundModal")
+            document.getElementById("projects-division").removeChild(document.getElementById("exception-Modal"))
         }
-        // console.log(displayValueCourses)
 
-        displayValueCourses.filter(function(value) {return value === "hidden"})
-        // console.log(displayValueCourses)
+        //checking if no projects with this tags were found
+        if(foundProjectSearches.length == 0) {
 
+            exceptionNoFoundCreation = document.createElement("div")
+            exceptionNoFoundCreation.id = "exception-Modal"
 
-        if (displayValueCourses === "hidden") {
-            console.log(displayValueCourses)
-            document.getElementById("exception-Modal").style.display = "block"
-    
+            let noFoundTagList = ""
+            noFoundTagList = document.createElement("ul")
+
+            checkedInputs.forEach(function(inputTag) {
+                noFoundTagList.innerHTML += createProjectsUtils.innerTagsException(inputTag)
+            })
+
+            //noFoundTagList is the list of all tags
+            // console.log(noFoundTagList)
+
+            exceptionNoFoundCreation.innerHTML = createProjectsUtils.createExceptionNoFound(noFoundTagList)
+
+            document.querySelector("#projects-division").appendChild(exceptionNoFoundCreation)
+            document.querySelector("#projects-division .exception").appendChild(noFoundTagList)
         }
-        // console.log(displayValueCourses)
-       
     }
-
 }
 
 
