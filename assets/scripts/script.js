@@ -111,10 +111,6 @@ createProjectsUtils = {
 
 }
 
-
-//function to generate every project 'banner'
-projects.forEach(createProjectsUtils.createProjects) 
-
 Modals = {
 
     //function to go to top of page
@@ -152,8 +148,13 @@ Modals = {
 
 }
 
-//adding event listener in case of change on the search bar
-getSearchBarForm.addEventListener("change", searchCourses)
+if(document.getElementById("projects") != null) {
+    //function to generate every project 'banner'
+    projects.forEach(createProjectsUtils.createProjects)
+
+    //adding event listener in case of change on the search bar
+    getSearchBarForm.addEventListener("change", searchCourses)
+}
 
 const getAllCourses = document.querySelectorAll(".projects")
 
