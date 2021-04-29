@@ -92,7 +92,7 @@ createProjectsUtils = {
 
     createExceptionNoFound(noFoundTagList) {
         const exceptionNoFound = `
-            <h2>Houve um problema</h2>
+            <h2>404</h2>
             <p class='exception'>Desculpe, mas no momento não possuímos um curso com:
             </p>
         `
@@ -110,10 +110,6 @@ createProjectsUtils = {
     }
 
 }
-
-
-//function to generate every project 'banner'
-projects.forEach(createProjectsUtils.createProjects) 
 
 Modals = {
 
@@ -152,8 +148,13 @@ Modals = {
 
 }
 
-//adding event listener in case of change on the search bar
-getSearchBarForm.addEventListener("change", searchCourses)
+if(document.getElementById("projects") != null) {
+    //function to generate every project 'banner'
+    projects.forEach(createProjectsUtils.createProjects)
+
+    //adding event listener in case of change on the search bar
+    getSearchBarForm.addEventListener("change", searchCourses)
+}
 
 const getAllCourses = document.querySelectorAll(".projects")
 
