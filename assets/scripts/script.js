@@ -24,6 +24,25 @@ projects = [
         banner: "assets/banner/banner_cypress.png",
     
         tags: ["cypress", "circleci", "cucumber"]
+    },
+    {
+        id: 3,
+        title: "Treinamento Básico de Automação Web com Cypress 2.0",
+        banner: "assets/banner/banner_cypress.png",
+    
+        tags: ["cypress", "circleci", "cucumber"]
+    },
+    {
+        id: 4,
+        title: "Treinamento do zero para Formação QA",
+        banner: "assets/banner/banner_qa_fundaments.jpeg",
+        tags: ["QA", "postman"]
+    },
+    {
+        id: 5,
+        title: "Treinamento Básico de Automação Web com Cypress",
+        banner: "assets/banner/banner_cypress.png",
+        tags: ["cypress", "circleci", "cucumber","mochawesome"]
     }
 ]
 
