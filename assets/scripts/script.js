@@ -1,6 +1,8 @@
 const catchMenuStyle = document.getElementById("menuList").style
 const getSearchBar = document.getElementById("searchBar")
 const getSearchBarForm = document.querySelector("#searchBar form")
+const getNumberInputs = document.querySelectorAll("#searchBar input")
+console.log(getNumberInputs.length)
 
 let mode = true
 
@@ -34,9 +36,9 @@ projects = [
     },
     {
         id: 4,
-        title: "Treinamento do zero para Formação QA",
-        banner: "assets/banner/banner_qa_fundaments.jpeg",
-        tags: ["QA", "postman"]
+        title: "Treinamento Básico de Automação Web com Cypress",
+        banner: "assets/banner/banner_cypress.png",
+        tags: ["cypress", "circleci", "cucumber","mochawesome"]
     },
     {
         id: 5,
@@ -220,7 +222,7 @@ SearchUtils = {
     
     //defining which element where checked and identifying it with his id
     defineCheckedCourses(checkedInputs) {
-        for(i=1;i<=8;i++) {
+        for(i=1;i<=getNumberInputs.length;i++) {
             n = i*2-1
 
             let getInput = document.querySelector("#searchBar form input:nth-child(" + n + ")")
