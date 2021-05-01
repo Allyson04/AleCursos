@@ -144,10 +144,11 @@ article#projects h2 img {
 
 article#projects > div{
     width: auto;
+    height: auto;
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; 
+    justify-content: center; 
 }
 
 article#projects .projects {
@@ -229,4 +230,50 @@ article#projects .projects label {
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
+}
+
+article#projects div#exception-Modal {
+    border: 1px solid black;
+    background: #fdd8511a;
+    border-radius: 2rem;
+    height: 10%;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+
+    margin: 5rem;
+    padding: 0 1.5rem;
+
+    box-shadow: 0px 0px 5px rgb(119, 119, 119);
+}
+
+article#projects div#exception-Modal h2 {
+    font-size: 4rem;
+}
+
+article#projects div#exception-Modal p::before {
+    content: "⚠ ";
+    font-size: 1.5rem;
+}
+
+article#projects div#exception-Modal li {
+    text-transform: capitalize;
+    list-style-type: none;
+
+    margin-top: 1rem;
+}
+
+article#projects div#exception-Modal li::before {
+    content: "➤  "
+}
+
+article#projects div#exception-Modal li:hover::before {
+    color: #16E6DA;
+    
+    transition: color .3s;
+    -webkit-transition: color .3s;
+    -moz-transition: color .3s;
+    -ms-transition: color .3s;
+    -o-transition: color .3s;
 }
