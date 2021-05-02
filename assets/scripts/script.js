@@ -2,7 +2,6 @@ const catchMenuStyle = document.getElementById("menuList").style
 const getSearchBar = document.getElementById("searchBar")
 const getSearchBarForm = document.querySelector("#searchBar form")
 const getNumberInputs = document.querySelectorAll("#searchBar input")
-console.log(getNumberInputs.length)
 
 let mode = true
 
