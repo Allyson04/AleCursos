@@ -168,6 +168,11 @@ Modals = {
 
 }
 
+console.log("Este Site foi criado por Allyson Eduardo")
+console.log("https://github.com/allyson04")
+console.log("CEO da Automacode: Wellington Santos")
+console.log("https://br.linkedin.com/in/wellington-s-86a030150")
+
 if(document.getElementById("projects") != null) {
     //function to generate every project 'banner'
     projects.forEach(createProjectsUtils.createProjects)
