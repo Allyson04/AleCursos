@@ -168,11 +168,14 @@ Modals = {
 
 }
 
+<<<<<<< HEAD
 console.log("Este Site foi criado por Allyson Eduardo")
 console.log("https://github.com/allyson04")
 console.log("CEO da Automacode: Wellington Santos")
 console.log("https://br.linkedin.com/in/wellington-s-86a030150")
 
+=======
+>>>>>>> 0b1112c08f131014f2b7e0f163a69bcecd3d8772
 if(document.getElementById("projects") != null) {
     //function to generate every project 'banner'
     projects.forEach(createProjectsUtils.createProjects)
