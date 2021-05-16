@@ -154,18 +154,7 @@ Modals = {
 
             // console.log("activating display")
         }
-    },
-
-    toggleMenu() {
-        if (mode) {
-            catchMenuStyle.left = "2rem"
-        } else {
-            catchMenuStyle.left = "-15rem"
-        }
-    
-        mode = !mode
     }
-
 }
 
 console.log("Este Site foi criado por Allyson Eduardo")
