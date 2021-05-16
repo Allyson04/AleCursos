@@ -21,7 +21,6 @@
     --instagram: rgb(254, 216, 117);
 }
 
-
 /* common styles */
 
 .backgroundFull {
@@ -63,6 +62,7 @@ h2 {
 
 body>header.backgroundFull {
     display: block;
+    height: 400px;
     background: url(../background/background-banner.jpeg) no-repeat,  black;
     background-size: contain;
     background-attachment: scroll;
@@ -127,19 +127,11 @@ header #menuButton svg {
 }
 
 header nav#menuList {
-    background: var(--smoke-list);
     font-size: 1.6rem;
-    border: 5px outset var(--cyan-menu);
-    border-radius: 10px 0 10px 0;
-    -webkit-border-radius: 10px 0 10px 0;
-    -moz-border-radius: 10px 0 10px 0;
-    -ms-border-radius: 10px 0 10px 0;
-    -o-border-radius: 10px 0 10px 0;
-    position: relative;
-    top: 10rem;
-    left: -15rem; /*otherwise left:2rem;*/
-    display: inline-flex;
-    flex-direction: column;
+    border-bottom: 0.5px white solid;
+
+    display: flex;
+    justify-content: flex-end;
     transition: left 0.3s ease-in-out;
     -webkit-transition: left 0.3s ease-in-out;
     -moz-transition: left 0.3s ease-in-out;
@@ -150,7 +142,10 @@ header nav#menuList {
 }
 
 header nav#menuList a {
-    margin: 0.5rem 1rem;
+    font-size: 1.3rem;
+    margin: 0.5rem 2rem;
+    color: var(--smoke-list);
+
 }
 
 header nav#menuList a:hover {
