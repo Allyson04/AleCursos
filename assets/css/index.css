@@ -89,7 +89,7 @@ section#searchBar label * {
 }
 
 section#searchBar svg {
-    width: 70px;
+    width: 70px; 
     height: 70px;
     margin-right: 10px;
     top: -45px;

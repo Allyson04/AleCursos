@@ -156,7 +156,7 @@ header nav#menuList a:hover {
 
 footer#contact {
     text-align: center;
-    background: url("../background/background-codigo.jpg") no-repeat;
+    background: rgb(19, 18, 18);
     background-size: 100% 100%;
 }
 
@@ -170,51 +170,42 @@ footer#contact .contacts {
     margin: 2.5rem 0;
 }
 
-footer#contact .contacts img ,
+footer#contact .contacts svg ,
 footer#contact .contacts a {
-    width: 4.5rem;
+    width: 4rem;
     margin: 0.5%;
 }
 
-footer#contact .contacts img {
-    transform: rotateX(45deg)rotateZ(-45deg);
-    -webkit-transform: rotateX(45deg)rotateZ(-45deg);
-    -moz-transform: rotateX(45deg)rotateZ(-45deg);
-    -ms-transform: rotateX(45deg)rotateZ(-45deg);
-    -o-transform: rotateX(45deg)rotateZ(-45deg);
-    transition: transform 0.4s;
-    -webkit-transition: transform 0.4s;
-    -moz-transition: transform 0.4s;
-    -ms-transition: transform 0.4s;
-    -o-transition: transform 0.4s;
+footer#contact .contacts a {
+    /* background: white !important; */
 }
 
-footer#contact .contacts img:hover {
-    transform: rotateX(45deg) rotateZ(-45deg) translate(15px, -15px);
-    -webkit-transform: rotateX(45deg) rotateZ(-45deg) translate(15px, -15px);
-    -moz-transform: rotateX(45deg) rotateZ(-45deg) translate(15px, -15px);
-    -ms-transform: rotateX(45deg) rotateZ(-45deg) translate(15px, -15px);
-    -o-transform: rotateX(45deg) rotateZ(-45deg) translate(15px, -15px);
+footer#contact .contacts svg {
+    background: white !important;
+
+    padding: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
-footer#contact .contacts a:nth-child(1) img:hover {
-    box-shadow: -10px 10px 5px 5px white, -15px 15px 5px 5px var(--telegram);
+footer#contact .contacts svg path.icon-background {
+    fill: white;
 }
 
-footer#contact .contacts a:nth-child(2) img:hover {
-    box-shadow: -10px 10px 5px 5px white, -15px 15px 5px 5px var(--whatsapp);
+footer#contact .contacts svg path.icon-body,
+footer#contact .contacts svg path.icon-body#plane-wings {
+    fill: black;
 }
 
-footer#contact .contacts a:nth-child(3) img:hover {
-    box-shadow: -10px 10px 5px 5px white, -15px 15px 5px 5px var(--email);
+footer#contact .contacts path#plane-body {
+    fill: gray;
 }
 
-footer#contact .contacts a:nth-child(4) img:hover {
-    box-shadow: -10px 10px 5px 5px white, -15px 15px 5px 5px var(--linkedin);
-}
-
-footer#contact .contacts a:nth-child(5) img:hover {
-    box-shadow: -10px 10px 5px 5px white, -15px 15px 5px 5px var(--instagram);
+footer#contact .contacts svg#svg {
+    background: green;
 }
 
 footer#contact .contacts a {
