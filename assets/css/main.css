@@ -127,6 +127,7 @@ header #menuButton svg {
 }
 
 header nav#menuList {
+    background-color: black;
     font-size: 1.6rem;
     border-bottom: 0.5px white solid;
     display: flex;
