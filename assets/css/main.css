@@ -161,6 +161,10 @@ footer#contact {
     background-size: 100% 100%;
 }
 
+footer#contact * {
+    color: white;
+}
+
 footer#contact h2 {
     display: inline-block;
     margin-top: 1rem;
