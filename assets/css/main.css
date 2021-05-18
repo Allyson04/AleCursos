@@ -159,6 +159,8 @@ footer#contact {
     text-align: center;
     background: rgb(19, 18, 18);
     background-size: 100% 100%;
+    position: relative;
+    bottom: 0;
 }
 
 footer#contact * {
@@ -169,6 +171,17 @@ footer#contact h2 {
     display: inline-block;
     margin-top: 1rem;
     font-weight: 600;
+}
+
+footer nav#menuList {
+    font-size: 1.6rem;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 0.5rem;
 }
 
 footer#contact .contacts {
