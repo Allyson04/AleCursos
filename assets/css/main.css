@@ -184,6 +184,15 @@ footer nav#menuList {
     margin: 0.5rem;
 }
 
+footer nav#menuList a:hover {
+    font-size: 1.7rem;
+    transition: font-size .3s ease;
+    -webkit-transition: font-size .3s ease;
+    -moz-transition: font-size .3s ease;
+    -ms-transition: font-size .3s ease;
+    -o-transition: font-size .3s ease;
+}
+
 footer#contact .contacts {
     margin: 2.5rem 0;
 }
