@@ -64,9 +64,8 @@
     background: red; */
 }
 
-#colaborators > div > section:nth-child(3) > section {
+#colaborators > div > section:nth-child(2) > section {
     display: grid;
-    /* grid-row: 1fr 1fr; */
     grid-column: repeat(3, 1fr);
 }
 
