@@ -63,7 +63,7 @@ h2 {
 body>header.backgroundFull {
     display: block;
     height: 400px;
-    background: url(../background/background-banner.jpeg) no-repeat,  black;
+    background: url(../img/background/background-banner.jpeg) no-repeat,  black;
     background-size: contain;
     background-attachment: scroll;
     background-position: center;
