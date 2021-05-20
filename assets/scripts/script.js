@@ -9,41 +9,47 @@ let projects = []
 projects = [
     {
         id: 0,
-        title: "Treinamento Básico de Automação Web com Cypress",
-        banner: "assets/banner/banner_cypress.png",
-        tags: ["cypress", "circleci", "cucumber","mochawesome"]
+        title: "Desenvolvimento Web Front-end",
+        banner: "assets/img/banner/Desenvolvimento_Web_Front-end.png",
+        tags: ["HTML5", "CSS3", "javascript"]
     },
     {
         id: 1,
-        title: "Treinamento do zero para Formação QA",
-        banner: "assets/banner/banner_qa_fundaments.jpeg",
-        tags: ["QA", "postman"]
+        title: "NodeJS: do Zero ao Avançado",
+        banner: "assets/img/banner/NodeJS_do_Zero_ao_Avançado.png",
+        tags: ["javascript", "nodeJS"]
     },
     {
         id: 2,
-        title: "Treinamento Básico de Automação Web com Cypress 2.0",
-        banner: "assets/banner/banner_cypress.png",
+        title: "Desenvolvimento Web Fullstack",
+        banner: "assets/img/banner/Desenvolvimento_Web_Fullstack.png",
     
-        tags: ["cypress", "circleci", "cucumber"]
+        tags: ["HTML5", "CSS3", "javascript", "nodeJS", "SQL"]
     },
     {
         id: 3,
-        title: "Treinamento Básico de Automação Web com Cypress 2.0",
-        banner: "assets/banner/banner_cypress.png",
+        title: "Programação Orientada a Objetos com ruby",
+        banner: "assets/img/banner/Programação_Orientada_a_Objetos_com_ruby.png",
     
-        tags: ["cypress", "circleci", "cucumber"]
+        tags: ["ruby"]
     },
     {
         id: 4,
-        title: "Treinamento Básico de Automação Web com Cypress",
-        banner: "assets/banner/banner_cypress.png",
-        tags: ["cypress", "circleci", "cucumber","mochawesome"]
+        title: "Testes Automáticos com Ruby + Cucumber",
+        banner: "assets/img/banner/Testes_Automáticos_com_Ruby_+_Cucumber.png",
+        tags: ["ruby", "cucumber"]
     },
     {
         id: 5,
-        title: "Treinamento Básico de Automação Web com Cypress",
-        banner: "assets/banner/banner_cypress.png",
-        tags: ["cypress", "circleci", "cucumber","mochawesome"]
+        title: "Aprenda APIs RESTFul com NodeJS + SQL",
+        banner: "assets/img/banner/Aprenda_APIs_RESTFul_com NodeJS_+_SQL.png",
+        tags: ["nodejs", "SQL"] 
+    },
+    {
+        id: 6,
+        title: "Construa Poderosos Websites com VueJS e Firebase",
+        banner: "assets/img/banner/Construa_Poderosos_Websites_com_VueJS_e_Firebase.png",
+        tags: ["vueJS", "firebase"]
     }
 ]
 
