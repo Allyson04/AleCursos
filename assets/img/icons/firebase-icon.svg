@@ -1,12 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <svg width="111px" height="151px" viewBox="0 0 111 151" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
-    <title>logo_lockup_firebase_vertical</title>
-    <desc>Created with Sketch.</desc>
     <defs>
         <linearGradient x1="-3.48177083%" y1="17.0266727%" x2="100.833333%" y2="92.8868033%" id="linearGradient-1">
-            <stop stop-color="#FFFFFF" stop-opacity="0.1" offset="0%"></stop>
-            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
         </linearGradient>
         <path d="M95.7984919,33.6246194 C95.5859256,32.3610745 94.6848395,31.3206592 93.4615125,30.9262876 C92.2381855,30.5319161 90.8962602,30.8492378 89.9812105,31.7492661 L72.2727216,49.5651223 L58.2428077,23.0544463 C57.6801918,21.9189555 56.5194912,21.2001264 55.2486188,21.2001264 C53.9777463,21.2001264 52.8170458,21.9189555 52.2544298,23.0544463 L44.6406351,37.5458126 L25.3922776,1.91410025 C23.852409,-0.984173003 19.489448,-0.216983024 18.9761585,3.02226355 L0.497735304,121.16952 L50.0301752,148.873603 C53.1471684,150.578603 56.9223279,150.578603 60.0393211,148.873603 L109.999502,121.16952 L95.7984919,33.6246194 Z" id="path-2"></path>
     </defs>
