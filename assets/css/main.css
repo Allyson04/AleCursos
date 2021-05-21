@@ -6,22 +6,17 @@
     /* header */
     --cyan-menu: rgba(66, 179, 231, 0.801);
     --purple-underline: #797bf8;
-    --smoke-lighter-menu: rgba(221, 221, 221, 0.603);
-    --smoke-menu-hover:  rgba(255, 255, 255, 0.685);
     --smoke-list: rgba(255, 255, 255, 0.801);
-    --light-black:  rgb(54, 56, 56);
-
 
     /* projects */
     --purple-border: #5746f1af;
 
-
     /* contacts */
-    --telegram: rgb(34, 152, 213);
-    --whatsapp: rgb(70, 199, 86);
-    --email: rgb(226, 227, 21);
-    --linkedin: rgb(0, 132, 177);
-    --instagram: rgb(254, 216, 117);
+    --hover-contact: rgb(207, 248, 255);
+
+    /* modal goUp*/
+    --smoke-goUp-button: rgba(255, 255, 255, 0.699);
+    --smoke-goUp-button-hover:  rgba(200, 200, 200, 0.699);
 }
 
 /* common styles */
@@ -205,7 +200,7 @@ footer#contact .contacts a {
 }
 
 footer#contact .contacts a:hover svg {
-    box-shadow: 0px 0px 10px 5px white,  0px 0px 10px 5px rgb(207, 248, 255) inset;
+    box-shadow: 0px 0px 10px 5px white,  0px 0px 10px 5px var(--hover-contact) inset;
 }
 
 footer#contact .contacts svg {
@@ -229,7 +224,7 @@ footer#contact .contacts svg path.icon-background {
 
 footer#contact .contacts svg path.icon-body,
 footer#contact .contacts svg path.icon-body#plane-wings {
-    fill: black;
+    fill: var(--bluish-black);
 }
 
 footer#contact .contacts path#plane-body {
@@ -264,7 +259,7 @@ div#goUp {
     display: none;
     width: 70px;
     height: 70px;
-    background-color: rgba(255, 255, 255, 0.699);
+    background-color: var(--smoke-goUp-button);
     border: 1px solid black;
     border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -289,7 +284,7 @@ div#goUp:hover {
     -moz-transform: scale(1.2);
     -ms-transform: scale(1.2);
     -o-transform: scale(1.2);
-    background: rgba(200, 200, 200, 0.699);
+    background: var(--smoke-goUp-button-hover);
 }
 
 div#goUp img {
