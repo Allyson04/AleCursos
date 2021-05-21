@@ -1,5 +1,8 @@
 /* Root */
 :root {
+    /* general colors */
+    --bluish-black: #161B21;
+
     /* header */
     --cyan-menu: rgba(66, 179, 231, 0.801);
     --purple-underline: #797bf8;
@@ -63,11 +66,9 @@ h2 {
 body>header.backgroundFull {
     display: block;
     height: 400px;
-    background: url(../img/background/background-banner.jpeg) no-repeat,  black;
-    background-size: contain;
-    background-attachment: scroll;
+    background: url(../img/icons/alecurso-logomark.svg) no-repeat,  var(--bluish-black);
+    background-size: auto 70%;
     background-position: center;
-    background-clip: content-box;
 
     position: relative;
     z-index: 2;
@@ -127,7 +128,7 @@ header #menuButton svg {
 }
 
 header nav#menuList {
-    background-color: black;
+    background-color: #000;
     font-size: 1.6rem;
     border-bottom: 0.5px white solid;
     display: flex;

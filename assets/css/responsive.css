@@ -39,14 +39,3 @@
     }
 
 }
-
-@media (min-width: 1024px) {
-    body>header.backgroundFull {
-        display: block;
-        background: url(../background/background-marca.jpeg) no-repeat,  black;
-        background-size: contain;
-        background-attachment: scroll;
-        background-position: center 30px;
-        background-clip: content-box;
-    }
-}
