@@ -56,6 +56,22 @@ h2 {
     border: 0;
 }
 
+nav#menuList a {
+    transition: transform .3s;
+    -webkit-transition: transform .3s;
+    -moz-transition: transform .3s;
+    -ms-transition: transform .3s;
+    -o-transition: transform .3s;
+}
+
+nav#menuList a:hover {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+
 /* Header */
 
 body>header.backgroundFull {
@@ -135,16 +151,9 @@ header nav#menuList a {
     font-size: 1.3rem;
     margin: 0.5rem 2rem;
     color: var(--smoke-list);
-    transition: font-size .3s;
-    -webkit-transition: font-size .3s;
-    -moz-transition: font-size .3s;
-    -ms-transition: font-size .3s;
-    -o-transition: font-size .3s;
 }
 
 header nav#menuList a:hover {
-    font-size: 1.35rem;
-
     color: white;
     text-decoration: underline solid gold 5px;
 }
@@ -178,15 +187,6 @@ footer nav#menuList {
     flex-direction: column;
     text-align: left;
     margin: 0.5rem;
-}
-
-footer nav#menuList a:hover {
-    font-size: 1.7rem;
-    transition: font-size .3s ease;
-    -webkit-transition: font-size .3s ease;
-    -moz-transition: font-size .3s ease;
-    -ms-transition: font-size .3s ease;
-    -o-transition: font-size .3s ease;
 }
 
 footer#contact .contacts {
