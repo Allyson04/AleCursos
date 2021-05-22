@@ -1,4 +1,4 @@
-@media (min-width: 768px) {
+@media (min-width: 900px) {
     header #menuButton {
         width: 15vw;
         max-width: 120px;
@@ -38,4 +38,73 @@
         display: inline-block;
     }
 
+}
+
+@media (max-width: 700px) {
+    
+    body>header.backgroundFull {
+        height: auto;
+    }
+
+    header #menuButton {
+        background: var(--smoke-list);
+        border: 4px outset #fde1be;
+        position: relative;
+        top: 9rem;
+        left: 2rem;
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 0.4rem;
+        -webkit-border-radius: 0.4rem;
+        -moz-border-radius: 0.4rem;
+        -ms-border-radius: 0.4rem;
+        -o-border-radius: 0.4rem;
+    
+        cursor: pointer;
+    }
+    
+    header #menuButton:active {
+        transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        -o-transform: scale(1.05);
+    }
+    
+    header #menuButton span {
+        font-size: 1.5rem;
+    }
+    
+    header #menuButton svg {
+        width: 2rem;
+        height: 2rem;
+        margin: 10px;
+    }
+
+    header nav#menuList {
+        background: var(--smoke-list);
+        font-size: 1.6rem;
+        border: 5px outset #fde1be;
+        border-radius: 10px 0 10px 0;
+        -webkit-border-radius: 10px 0 10px 0;
+        -moz-border-radius: 10px 0 10px 0;
+        -ms-border-radius: 10px 0 10px 0;
+        -o-border-radius: 10px 0 10px 0;
+        position: relative;
+        top: 10rem;
+        left: -15rem; /*otherwise left:2rem;*/
+        display: inline-flex;
+        flex-direction: column;
+    }
+
+    header nav#menuList a {
+        color: black;
+    }
+
+    footer nav#menuList {
+        display: none;
+    }
 }
